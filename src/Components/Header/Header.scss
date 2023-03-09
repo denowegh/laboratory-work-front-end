@@ -1,0 +1,117 @@
+$FIRST_COLOR_GRADIENT: #56ccf2;
+$SECOND_COLOR_GRADIENT: #2f80ed;
+$RIGHT_NAV: -200%;
+$Rotate_Gradient: 180deg;
+.divHeader {
+    width: 100%;
+}
+.open,
+.close {
+    color: white;
+    display: block;
+}
+header {
+    min-height: 100px;
+    background: linear-gradient(45deg, $FIRST_COLOR_GRADIENT, #2f80ed);
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 5;
+    & .switcher {
+        position: absolute;
+        visibility: hidden;
+        left: -99999px;
+    }
+    & label {
+        cursor: pointer;
+
+        font-size: 26px;
+        padding: 5px;
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        width: 400px;
+        height: 100vh;
+        background: linear-gradient(
+            $Rotate_Gradient,
+            $FIRST_COLOR_GRADIENT,
+            $SECOND_COLOR_GRADIENT
+        );
+        right: $RIGHT_NAV;
+        top: 0;
+        text-align: center;
+        align-items: center;
+        padding: 100px 0px;
+        transition: 0.75s;
+    }
+    & ul {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+    }
+    & a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0px 15px;
+        transition: 0.45s;
+    }
+    & a:hover {
+        color: #64737c;
+    }
+    & label:hover {
+        color: rgba(255, 255, 255, 0.3);
+    }
+    & .switcher:checked ~ nav {
+        right: 0;
+    }
+    & li {
+        width: 96%;
+        text-align: center;
+
+        align-items: center;
+        & .liElement {
+            width: 100%;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+}
+
+li .liElement {
+    font-size: medium;
+}
+
+.nameAndLogoProg {
+    cursor: pointer;
+    user-select: none;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(
+            $Rotate_Gradient,
+            $FIRST_COLOR_GRADIENT,
+            $SECOND_COLOR_GRADIENT
+        );
+        right: $RIGHT_NAV;
+        top: 0;
+        text-align: center;
+        align-items: center;
+        padding: 100px 0px;
+        transition: 0.75s;
+    }
+}
