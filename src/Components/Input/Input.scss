@@ -1,0 +1,38 @@
+.myinput {
+    border: none;
+    border-bottom: 4px solid black;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 20px;
+    outline: none;
+    transition: 0.3s;
+    &::placeholder {
+        color: transparent;
+    }
+    &:placeholder-shown ~ .lableFromInput {
+        top: 20px;
+        cursor: text;
+    }
+    &:focus {
+        border-bottom: 4px solid #68cff1;
+    }
+    &:focus ~ .lableFromInput {
+        top: 0;
+        color: #68cff1;
+    }
+}
+.divInput {
+    position: relative;
+    padding: 15px;
+}
+.lableFromInput {
+    position: absolute;
+    top: 0;
+    transition: 0.3s;
+
+    display: block;
+    color: black;
+    font: bold;
+}
