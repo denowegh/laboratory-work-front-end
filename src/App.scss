@@ -5,24 +5,25 @@
 .App {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 100px 100%;
     grid-template-areas:
         "hd hd hd hd hd"
-        "main . . . .";
+        "main input input . .";
 }
-.bigYouTube {
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px;
-}
+
 button:hover {
     cursor: pointer;
 }
 .positionButton {
     grid-area: main;
-    width: 50px;
+    width: 150px;
     height: 50px;
 }
 .divHeader {
     grid-area: hd;
+}
+.divInputInApp {
+    grid-area: input;
+    width: 200px;
+    height: 30px;
 }
