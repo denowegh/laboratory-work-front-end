@@ -3,14 +3,28 @@ import "./Input.scss";
 const Input: React.FunctionComponent<{
     className?: string;
     placeholder?: string;
-}> = ({ className = "", placeholder, ...props }) => {
+    Type?: string;
+    Value: any;
+    setValueUseState: React.Dispatch<React.SetStateAction<any>>;
+}> = ({
+    className = "",
+    placeholder,
+    Type = "text",
+    setValueUseState,
+    Value,
+}) => {
+    function handleNum1Change(e: React.ChangeEvent<HTMLInputElement>) {
+        setValueUseState(e.target.value);
+    }
     return (
         <div className={"divInput " + className}>
             <input
-                {...props}
                 placeholder={placeholder}
                 className="myinput"
                 id="inputInDiv"
+                value={Value}
+                type={Type}
+                onChange={handleNum1Change}
             />
             <label htmlFor="inputInDiv" className="lableFromInput">
                 {placeholder}

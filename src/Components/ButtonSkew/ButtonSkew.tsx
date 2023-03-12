@@ -4,13 +4,15 @@ import "./ButtonSkew.scss";
 const ButtonSkew: React.FC<{
     children: string;
     className?: string;
-}> = ({ children, className = "", ...props }) => {
+    onClick?: () => void;
+}> = ({ children, className = "", onClick = () => {}, ...props }) => {
     const btn = useRef<HTMLButtonElement>(null);
 
     return (
         <button
             {...props}
             id="Btn"
+            onClick={onClick}
             onMouseEnter={() => {
                 const elem2 = btn.current;
                 if (elem2) {

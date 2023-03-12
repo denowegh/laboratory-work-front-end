@@ -1,7 +1,7 @@
 $FIRST_COLOR_GRADIENT: #56ccf2;
 $SECOND_COLOR_GRADIENT: #2f80ed;
 $RIGHT_NAV: -200%;
-$Rotate_Gradient: 180deg;
+$Rotate_Gradient: 90deg;
 .divHeader {
     position: fixed;
     top: 0;
@@ -10,7 +10,7 @@ $Rotate_Gradient: 180deg;
 }
 .open,
 .close {
-    color: white;
+    color: black;
     display: block;
 }
 header {

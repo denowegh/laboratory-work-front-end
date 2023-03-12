@@ -1,29 +1,33 @@
-* {
-    padding: 0px;
-    margin: 0px;
+.FirstWork {
+    margin: 15px;
 }
-.App {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 100px 100%;
-    grid-template-areas:
-        "hd hd hd hd hd"
-        "main input input . .";
-}
-
-button:hover {
-    cursor: pointer;
-}
-.positionButton {
-    grid-area: main;
-    width: 150px;
-    height: 50px;
-}
-.divHeader {
-    grid-area: hd;
-}
-.divInputInApp {
-    grid-area: input;
+.FirstWorkButton {
     width: 200px;
-    height: 30px;
+    height: 40px;
+    margin: 10px;
+}
+.InputFirstWork {
+    width: 300px;
+    height: 40px;
+}
+.H1FirstWork {
+    margin: 10px;
+    text-align: center;
+}
+.MainInfoFirstWork {
+    display: flex;
+    flex-direction: row;
+}
+.RespounseFirstWork {
+    margin: 10px;
+    border-left: 3px solid black;
+    padding: 10px;
+}
+.H2FirstWork {
+    margin: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+}
+.FormulaSizeFirstWork {
+    font-size: 25px;
 }
