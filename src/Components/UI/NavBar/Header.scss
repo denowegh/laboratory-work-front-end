@@ -3,7 +3,10 @@ $SECOND_COLOR_GRADIENT: #2f80ed;
 $RIGHT_NAV: -200%;
 $Rotate_Gradient: 180deg;
 .divHeader {
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 9999;
 }
 .open,
 .close {
@@ -12,7 +15,11 @@ $Rotate_Gradient: 180deg;
 }
 header {
     min-height: 100px;
-    background: linear-gradient(45deg, $FIRST_COLOR_GRADIENT, #2f80ed);
+    background: linear-gradient(
+        45deg,
+        $FIRST_COLOR_GRADIENT,
+        $SECOND_COLOR_GRADIENT
+    );
     padding: 0px 20px;
     display: flex;
     align-items: center;
@@ -83,7 +90,7 @@ header {
 
 li .liElement {
     font-size: medium;
-    height: 30px;
+    height: 50px;
 }
 
 .nameAndLogoProg {

@@ -1,0 +1,23 @@
+.MainLable {
+    background-color: #68cff16c;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    transition: all 1s;
+    &:hover {
+        scale: 1.05;
+        background-color: #3b7a8f6c;
+    }
+    border-radius: 2%;
+}
+.NumberWork {
+    margin: 5px;
+    padding: 5px;
+}
+.Title {
+    margin: 5px;
+    padding: 5px;
+}
+.Variant {
+    margin: 20px 0px 0px 10px;
+}

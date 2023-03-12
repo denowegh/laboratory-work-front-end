@@ -1,1 +1,10 @@
-
+$FIRST_COLOR_GRADIENT: #56ccf2;
+$SECOND_COLOR_GRADIENT: #2f80ed;
+html {
+    background-size: 100% 100%;
+    background: linear-gradient(
+        100deg,
+        $FIRST_COLOR_GRADIENT,
+        $SECOND_COLOR_GRADIENT
+    );
+}

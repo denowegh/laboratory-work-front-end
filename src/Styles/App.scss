@@ -1,0 +1,21 @@
+$FIRST_COLOR_GRADIENT: #56ccf2;
+$SECOND_COLOR_GRADIENT: #2f80ed;
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.App {
+    padding-top: 100px;
+    height: 100%;
+}
+::-webkit-scrollbar {
+    background: linear-gradient(
+        45deg,
+        $FIRST_COLOR_GRADIENT,
+        $SECOND_COLOR_GRADIENT
+    );
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0;
+}
